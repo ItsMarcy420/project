@@ -29,36 +29,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
-class MainActivity : ComponentActivity() {
+class AdjustActivity :ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//        setContent{
-//           startScreen()
-//        }
+        setContentView(R.layout.activity_adjust)
 
-        val settingBtn = findViewById<Button>(R.id.settingBtn)
-        settingBtn.setOnClickListener {
+
+        val goBackBtn = findViewById<Button>(R.id.goBackBtn)
+        goBackBtn.setOnClickListener {
             // 在這裡添加按鈕被點擊時的操作
-            val intent = Intent(this, AdjustActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        val startBtn = findViewById<Button>(R.id.startBtn)
-        startBtn.setOnClickListener {
-            val intent = Intent(this,PickingActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
-
-
-@Composable
-
-fun SettingBtn(name:String){
-    Text(text = "Hello $name!" )
-}
-
-
-
-//@Preview(showBackground = true)
