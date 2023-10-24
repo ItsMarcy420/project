@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.SeekBar
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.core.LinearEasing
@@ -37,10 +38,11 @@ class AdjustActivity :ComponentActivity(){
 
         val goBackBtn = findViewById<Button>(R.id.goBackBtn)
         goBackBtn.setOnClickListener {
-            // 在這裡添加按鈕被點擊時的操作
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        val volumeBar = findViewById<SeekBar>(R.id.volumeBar)
 
     }
 }

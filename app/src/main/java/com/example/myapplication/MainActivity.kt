@@ -28,15 +28,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        setContent{
-//           startScreen()
-//        }
 
+        //return back to mainactivity
+        if (!isTaskRoot) {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+
+        //setting on upper right corner
         val settingBtn = findViewById<Button>(R.id.settingBtn)
         settingBtn.setOnClickListener {
             // 在這裡添加按鈕被點擊時的操作
@@ -44,6 +48,7 @@ class MainActivity : ComponentActivity() {
             startActivity(intent)
         }
 
+        //maybe change to whole page
         val startBtn = findViewById<Button>(R.id.startBtn)
         startBtn.setOnClickListener {
             val intent = Intent(this,PickingActivity::class.java)
