@@ -45,7 +45,28 @@ class PickingActivity :ComponentActivity(){
             startActivity(intent)
         }
 
-        val volumeBar = findViewById<SeekBar>(R.id.volumeBar)
-        //調音量應該是寫這邊
+        val settingBtn = findViewById<Button>(R.id.settingBtn)
+        settingBtn.setOnClickListener {
+            // 在這裡添加按鈕被點擊時的操作
+            val intent = Intent(this, AdjustActivity::class.java)
+            startActivity(intent)
+        }
+
+        val gameOneBtn = findViewById<Button>(R.id.gameOneBtn)
+        gameOneBtn.setOnClickListener {
+            // 在這裡添加按鈕被點擊時的操作
+            val intent = Intent(this, GameOneActivity::class.java)
+            startActivity(intent)
+        }
+
+        val gameTwoBtn = findViewById<Button>(R.id.gameTwoBtn)
+        gameTwoBtn.setOnClickListener {
+            // 在這裡添加按鈕被點擊時的操作
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
 }

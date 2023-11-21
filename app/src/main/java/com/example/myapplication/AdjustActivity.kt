@@ -31,6 +31,8 @@ import androidx.compose.ui.unit.sp
 
 
 class AdjustActivity :ComponentActivity(){
+
+    // 調設定的
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_adjust)

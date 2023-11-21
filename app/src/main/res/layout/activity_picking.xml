@@ -4,20 +4,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/goBackBtn"
-
-        android:layout_width="wrap_content"
+    <LinearLayout   android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="back"/>
-    <TextView
-        android:id="@+id/tem_id_1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/goBackBtn"
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="gamemode"
-        android:gravity="center"
-        android:textSize="100dp"
-        />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="back"/>
 
+        <Space
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"></Space>
+
+        <Button
+            android:id="@+id/settingBtn"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="setting" />
+
+    </LinearLayout>
+
+    <LinearLayout   android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/gameOneBtn"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_weight="1"
+            android:text="One"/>
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="15dp"></Space>
+
+        <Button
+            android:id="@+id/gameTwoBtn"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_weight="1"
+            android:text="Two"/>
+
+
+    </LinearLayout>
 </LinearLayout>
